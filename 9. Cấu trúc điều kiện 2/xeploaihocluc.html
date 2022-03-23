@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp loại học lực</title>
+</head>
+<body>
+    <script>
+        ten= prompt("Tên là gì?");
+        DTB= prompt("Được rồi thằng "+ten+". Hãy nhập điểm trung bình của mày vào đây");
+        if (DTB<0){
+            alert("Súc vật");
+        }
+        if (DTB==0){
+            alert("Bỏ học đi");
+        }
+        if (DTB>0 && DTB<4.0){  
+            alert("Óc chó");
+        }
+        if (DTB>=4.0 && DTB<6.0){
+            alert("Học phí time");
+        }
+        if (DTB>=6.0 && DTB<8.0){
+            alert("Gà");
+        }
+        if (DTB>=8.0 && DTB<=10){
+            alert("Gian lận");
+        }
+        if (DTB>10.0){
+            alert("Mua điểm");
+        }
+    </script>
+</body>
+</html>

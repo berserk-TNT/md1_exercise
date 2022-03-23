@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var size= prompt("Enter the array size");
+        var arr= new Array(size);
+        var min= 23;
+        var max= 97;
+        for (i=0; i<size; i++){
+            arr[i]= Math.floor(Math.random()*(max-min+1)) + min;
+        }
+        console.log(arr);
+        var countSCP= 0;
+        for (i=0; i<size; i++){
+            if (Number.isInteger(Math.sqrt(arr[i]))){
+                console.log(arr[i]);
+                countSCP++;
+            }
+        }
+        console.log("Count of SCP is "+countSCP);
+        var countSNT=0;
+        for (i=0; i<size; i++){
+            for (j=2; j<arr[i]; j++){
+                var isSNT= true;
+                if (arr[i] % j == 0){
+                    isSNT= false;
+                    break;
+                }
+            }
+            if (isSNT){
+                console.log(arr[i]);
+                countSNT++;
+            }
+        }
+        console.log("Count of SNT is "+countSNT);
+    </script>
+</body>
+</html>

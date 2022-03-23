@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm</title>
+</head>
+<body>
+    <h1>Điểm môn học</h1>
+    <input type="text" id="diemLy" placeholder="Điểm Lý">
+    <input type="text" id="diemHoa" placeholder="Điểm Hóa">
+    <input type="text" id="diemSinh" placeholder="Điểm Sinh"><br>
+    <button type="button" id="T" onclick="tong()">Tổng</button>
+    <button type="button" id="TB" onclick="trungbinh()">Trung bình</button>
+<script>
+    function tong(){
+        var L= document.getElementById("diemLy").value;
+        var H= document.getElementById("diemHoa").value;
+        var S= document.getElementById("diemSinh").value;
+        var tong= parseInt(L)+parseInt(H)+parseInt(S);
+        alert("Tổng điểm: "+tong);
+    }
+    function trungbinh(){
+        var L= document.getElementById("diemLy").value;
+        var H= document.getElementById("diemHoa").value;
+        var S= document.getElementById("diemSinh").value;
+        var tong= (parseInt(L)+parseInt(H)+parseInt(S))/3;
+        alert("Điểm trung bình: "+trungbinh);
+    }
+</script>
+</body>
+</html>

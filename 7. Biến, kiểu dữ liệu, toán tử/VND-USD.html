@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+
+<body>
+    <form>
+        <label><b>Amount</b></label><br />
+        <input type="text" id="idamount" placeholder="Nhập trị giá" />
+        <label>From</label>
+        <select id="idfrom">
+            <option>VND</option>
+            <option>USD</option>
+        </select>
+        <label>To</label>
+        <select id="idto">
+            <option>VND</option>
+            <option>USD</option>
+        </select>
+        <button type="button" onclick="chuyendoi()">Convert</button>
+    </form>
+    <script>
+        function chuyendoi() {
+            var from = document.getElementById("idfrom").value;
+            var to = document.getElementById("idto").value;
+            var amount = document.getElementById("idamount").value;
+            if (from == "VND" && to == "VND") {
+                kq = amount;
+                alert(amount + " VND to VND: " + kq + " VND");
+                console.log(amount + " VND to VND: " + kq + " VND");
+            }
+            if (from == "VND" && to == "USD") {
+                kq = amount / 23000;
+                alert(amount + " VND to USD: " + kq + " USD");
+                console.log(amount + " VND to USD: " + kq + " USD");
+            }
+            if (from == "USD" && to == "USD") {
+                kq = amount;
+                alert(amount + " USD to USD: " + kq + " USD");
+                console.log(amount + " USD to USD: " + kq + " USD");
+            }
+            if (from == "USD" && to == "VND") {
+                kq = amount * 23000;
+                alert(amount + " USD to VND: " + kq + " VND");
+                console.log(amount + " USD to VND: " + kq + " VND");
+            }
+        }
+    </script>
+</body>
+
+</html>

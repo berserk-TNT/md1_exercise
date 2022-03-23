@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích hình tròn</title>
+</head>
+<input type="text" id="r" placeholder="Nhập bán kính">
+<button type="button" onclick="dientich()">Diện tích</button>
+<body>
+    <script>
+        function dientich(){
+            var r= document.getElementById("r").value;
+            var S= 3.14*r*r;
+            alert("Diện tích hình tròn: "+S);
+            console.log("Bán kính: "+r);
+            console.log("Diện tích hình tròn: "+S);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+    <script>
+        var num= prompt("Nhập số chữ đã dùng")
+        if (num<0){
+            alert("Nhập lại");
+        }
+        if (num>=0 && num<=100){
+            fee= 1000*num;
+        }
+        if (num>=101 && num<=150){
+            fee= 1000*100 + 2000*(num-100);
+        }
+        if (num>=151 && num<=200){
+            fee= 1000*100 + 2000*50 + 2500*(num-150);
+        }
+        if (num>200){
+            fee= 1000*100 + 2000*50 +2500*50 + 3000*(num-200);
+        }
+        alert("Số tiền cần trả "+fee+" VNĐ");
+    </script>
+</body>
+</html>

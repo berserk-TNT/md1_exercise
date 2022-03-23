@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Fast Cheap</title>
+</head>
+<body>
+    <input type="checkbox" id="idgood" onclick="switchgood()">GOOD <br>
+    <input type="checkbox" id="idfast" onclick="switchfast()">FAST <br>
+    <input type="checkbox" id="idcheap" onclick="switchcheap()">CHEAP
+<script>    
+    function random() {
+    return Math.floor((Math.random() * 2))==0;
+    }
+    function switchgood(){
+        var good = document.getElementById("idgood");
+        var fast = document.getElementById("idfast");
+        var cheap = document.getElementById("idcheap");
+        console.log(good,fast,cheap);
+        if (fast.checked && cheap.checked){
+            //if (Math.random() < 0.5){
+            if (random()){
+                fast.checked = false;
+            } else{
+                cheap.checked = false;
+            }
+        }
+    }
+    function switchfast(){
+        var good = document.getElementById("idgood");
+        var fast = document.getElementById("idfast");
+        var cheap = document.getElementById("idcheap");      
+        console.log(good.checked,fast.checked,cheap.checked);
+        if (good.checked && cheap.checked){
+            //if (Math.random() < 0.5){
+            if (random()){
+                good.checked = false
+            } else{
+                cheap.checked = false
+            }
+        }
+    }
+    function switchcheap(){
+        var good = document.getElementById("idgood");
+        var fast = document.getElementById("idfast");
+        var cheap = document.getElementById("idcheap");
+        console.log(good.checked,fast.checked,cheap.checked);
+        if (good.checked && fast.checked){
+            //if (Math.random() < 0.5) {
+            if (random()){
+                good.checked = false
+            } else{
+                fast.checked = false
+            }
+        }
+    }
+</script>
+</body>
+</html>

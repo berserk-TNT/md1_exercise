@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        var von= prompt("Nhập số vốn đầu tư");
+        var thang= prompt("Nhập số tháng gửi tiền");
+        var laisuat= prompt("Nhập lãi suất % hằng tháng");
+        lai= von*(1+0.01*laisuat)^thang;
+        alert("Số tiền lãi là "+lai+" VNĐ");
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa hồng theo doanh số</title>
+</head>
+<body>
+    <script>
+        doanhso= prompt("Doanh số bán hàng");
+        if (doanhso >300){
+            hoahong= 0.2*doanhso;
+        }
+        else{
+            if (doanhso >100 && doanhso <=300){
+                hoahong= 0.2*doanhso;
+            }
+            else{
+                if (doanhso >=0 && doanhso <=100){
+                    hoahong= 0.05*doanhso;
+                }
+                else{
+                    alert("Doanh số phải lớn hơn 0");
+                }
+            }
+        }
+        alert("Hoa hồng "+hoahong+" VNĐ");
+    </script>
+</body>
+</html>

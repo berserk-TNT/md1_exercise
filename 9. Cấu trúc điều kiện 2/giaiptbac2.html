@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        var a= parseInt(prompt("Nhập a"));
+        var b= parseInt(prompt("Nhập b"));
+        var c= parseInt(prompt("Nhập c"));
+        D= Math.pow(b, 2) - 4*a*c;
+        console.log("D" + D);
+        if (D<0){
+            console.log("Phương trình vô nghiệm");
+            alert("Phương trình vô nghiệm");
+        }
+        if (D==0){
+            n= -b/(2*a);
+            console.log("Phương trình có 1 nghiệm là n="+n);
+            alert("Phương trình có 1 nghiệm là n="+n);
+        }
+        if (D>0){
+            n1= (-b - Math.sqrt(D))/(2*a);
+            n2= (-b + Math.sqrt(D))/(2*a);
+            console.log("Phương trình có 2 nghiệm là n1="+n1+" và n2="+n2);
+            alert("Phương trình có 2 nghiệm là n1="+n1+" và n2="+n2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+    <script>
+        let phut= prompt("Gọi hết nhiêu phút?");
+        if (phut==0){
+            tien= 25000;
+        }
+        if (phut>0 && phut<=50){
+            tien= 25000 + 600*phut;
+        }
+        if (phut>50 && phut <=200){
+            tien= 25000 + 600*50 + 400*(phut-50);
+        }
+        if (phut>200){
+            tien= 25000 + 600*50 + 400*99 + 200*(phut-200);
+        }
+        console.log("Trả "+tien+" VNĐ");
+        alert("Trả "+tien+" VNĐ");
+    </script>
+</body>
+</html>

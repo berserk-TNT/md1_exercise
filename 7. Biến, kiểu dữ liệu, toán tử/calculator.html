@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="idgiatria" placeholder="a"><input type="text" id="idgiatrib" placeholder="b"><br>
+    <button type="button" onclick="tinhtong()">+</button>
+    <button type="button" onclick="tinhhieu()">-</button>  
+    <button type="button" onclick="tinhtich()">*</button>
+    <button type="button" onclick="tinhthuong()">/</button>
+</body>
+<script>
+    function tinhtong(){
+        var a= document.getElementById('idgiatria').value;
+        var b= document.getElementById('idgiatrib').value;
+        var tong= parseInt(a)+parseInt(b);
+        alert('Tổng là: ' + tong);
+        console.log(a+"+"+b+"="+tong);
+    }
+    function tinhhieu(){
+        var a= document.getElementById('idgiatria').value;
+        var b= document.getElementById('idgiatrib').value;
+        var hieu= parseInt(a)-parseInt(b);
+        alert('Hiệu là: ' + hieu);
+        console.log(a+"-"+b+"="+hieu);
+    }
+    function tinhtich(){
+        var a= document.getElementById('idgiatria').value;
+        var b= document.getElementById('idgiatrib').value;
+        var tich= parseInt(a)*parseInt(b);
+        alert('Tích là: ' + tich);
+        console.log(a+"*"+b+"="+tich);
+    }
+    function tinhthuong(){
+        var a= document.getElementById('idgiatria').value;
+        var b= document.getElementById('idgiatrib').value;
+        var thuong= parseInt(a)/parseInt(b);
+        alert('Hiệu là: ' + thuong);
+        console.log(a+"/"+b+"="+thuong);
+    }
+</script>
+</html>

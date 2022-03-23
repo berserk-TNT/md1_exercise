@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <script>
+        var numbers= prompt("Cần tìm bao nhiêu số nguyên tố đầu tiên?");
+        var countj= 0;
+        var counti= 0;
+        var i, j;
+        for (i=2; i<=numbers; i++){
+            for (j=2; j<=Math.sqrt(i); j++){
+                if (j % i == 0){
+                    countj++;
+                }
+                if (countj==0){
+                counti++;
+                console.log(i);
+                document.write(i+"<br/>");
+                }
+                if (counti==numbers){
+                    break;
+                }   
+            }
+        }
+    </script>
+</body>
+</html
